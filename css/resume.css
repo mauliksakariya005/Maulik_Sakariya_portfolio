@@ -1,0 +1,201 @@
+
+
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #2d3748;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #3f51b5, #2196f3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.resume-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.resume-column {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.resume-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e9f5ff;
+}
+
+.resume-header i {
+  font-size: 1.5rem;
+  color: #2196f3;
+  background: #e9f5ff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-header h3 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin: 0;
+}
+
+/* Personal Info Styles */
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.info-item i {
+  color: #2196f3;
+  width: 20px;
+  text-align: center;
+}
+
+/* Education Styles */
+.resume-item {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.resume-item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(to bottom, #2196f3, #00bcd4);
+}
+
+.resume-date {
+  font-weight: 600;
+  color: #3f51b5;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.resume-content h4 {
+  font-size: 1.2rem;
+  color: #2d3748;
+  margin-bottom: 5px;
+}
+
+.resume-subtitle {
+  color: #4a5568;
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.resume-institution {
+  color: #718096;
+  font-style: italic;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.resume-details {
+  padding-left: 20px;
+  color: #4a5568;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.resume-details li {
+  margin-bottom: 8px;
+}
+
+/* Skills Styles */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-category h4 {
+  color: #3f51b5;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.skill-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-list li {
+  background: #e9f5ff;
+  color: #2d3748;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* Download Button */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(90deg, #3f51b5, #2196f3);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 40px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.download-btn i {
+  margin-right: 10px;
+}
+
+.resume-download {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .resume-column {
+    min-width: 100%;
+  }
+  
+  .section-heading {
+    font-size: 2rem;
+  }
+}

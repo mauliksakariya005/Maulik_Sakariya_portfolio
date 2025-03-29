@@ -1,0 +1,94 @@
+
+    /* About Section Styles */
+    .highlight {
+      color: #007bff;
+    }
+    
+    .about-container {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .about-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 25px;
+    }
+    
+    .about-icon {
+      background: #e9f5ff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #007bff;
+      flex-shrink: 0;
+    }
+    
+    .about-content {
+      flex: 1;
+    }
+    
+    .about-content p {
+      margin-bottom: 25px;
+      line-height: 1.7;
+      color: #555;
+    }
+    
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 15px;
+    }
+    
+    .skill-item {
+      background: #f8f9fa;
+      padding: 15px 10px;
+      border-radius: 8px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid #e9ecef;
+    }
+    
+    .skill-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-color: #007bff;
+    }
+    
+    .skill-item i {
+      font-size: 24px;
+      color: #007bff;
+      display: block;
+      margin-bottom: 8px;
+    }
+    
+    .skill-item span {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+      .about-card {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .about-icon {
+        margin: 0 auto;
+      }
+      
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  
+    

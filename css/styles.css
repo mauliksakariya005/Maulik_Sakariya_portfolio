@@ -1,0 +1,16 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #83b8e4;
+  }
+  .navbar, .footer {
+    background-color: #343a40;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .section-heading {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
