@@ -10,6 +10,9 @@
   <link href="css\herosection.css" rel="stylesheet">
   <link href="css\aboutme.css" rel="stylesheet">
   <link href="css\resume.css" rel="stylesheet">
+  <link href="css\projects.css" rel="stylesheet">
+  <link href="css\contact.css" rel="stylesheet">
+  <link href="css\footer.css" rel="stylesheet">
   <script src="script.js"></script>
 </head>
 <body>
@@ -17,7 +20,7 @@
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">Maulik Sakariya</a>
+      <a class="navbar-brand" href="#home">Maulik Sakariya</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,7 +30,7 @@
             <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#resume">Resume</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#projects">Projects</a>
@@ -41,10 +44,9 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="profile-section">
+  <section id="home" class="profile-section">
     <div class="container">
       <div class="profile-wrapper">
-        <!-- Text Content -->
         <div class="profile-text">
           <h1 class="profile-name">Maulik Sakariya</h1>
           <p class="profile-title">Computer Engineering Student</p>
@@ -52,22 +54,15 @@
           <p class="profile-desc">Passionate about coding, problem-solving, and building innovative solutions.</p>
         </div>
         <div class="profile-photo">
-          <img src="20221118_123728-01.jpeg" alt="Maulik Sakariya" class="profile-img">
+          <img src="documents/profile_img.jpeg" alt="Maulik Sakariya" class="profile-img">
         </div>
       </div>
     </div>
   </section>
   
-  
 
-
-
-
-
-  
-
-  <!-- About Section -->
-  <section id="about" class="section">
+<!-- About Section -->
+<section id="about" class="section">
     <div class="container">
       <h2 class="section-heading">About <span class="highlight">Me</span></h2>
       <div class="about-container">
@@ -76,7 +71,7 @@
             <i class="fas fa-laptop-code"></i>
           </div>
           <div class="about-content">
-            <p>As a Computer Engineering student at GEC-Rajkot, I've developed strong technical skills through coursework and hands-on projects. Here's what I've mastered so far:</p>
+            <p>As a Computer Engineering student at GEC-Rajkot, I've developed strong technical skills through coursework and hands-on projects. Here's what I've learned so far:</p>
             
             <div class="skills-grid">
               <div class="skill-item">
@@ -118,12 +113,10 @@
     </div>
     <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  </section>
+</section>
   
   
-  
-  
-
+<!-- Resume Section -->
   <section id="resume" class="profile-section">
     <div class="container">
       <h2 class="section-heading">My <span class="highlight">Resume</span></h2>
@@ -224,7 +217,6 @@
                 <li>HTML5</li>
                 <li>CSS3</li>
                 <li>Bootstrap</li>
-                <li>React.js</li>
               </ul>
             </div>
             
@@ -234,7 +226,6 @@
                 <li>MySQL</li>
                 <li>Git/GitHub</li>
                 <li>VS Code</li>
-                <li>Linux</li>
               </ul>
             </div>
           </div>
@@ -253,67 +244,175 @@
 
   
 
-  
-
-
-
   <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-heading">Projects</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Project 1</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
+<section id="projects" class="projects-section">
+  <div class="container">
+    <h2 class="section-heading">My <span class="highlight">Projects</span></h2>
+    <p class="section-subtitle">Here's what I've built so far</p>
+    
+    <div class="projects-grid">
+      <!-- Project 1 - Portfolio Website -->
+      <div class="project-card">
+        <div class="project-img">
+          <img src="documents/portfolio_img.png" alt="Portfolio Website Screenshot">
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Project 2</h5>
-              <p class="card-text"></p>
-            </div>
+        <div class="project-content">
+          <h3>Personal Portfolio Website</h3>
+          <p class="project-description">
+            A responsive website showcasing my skills, projects, and contact information.
+            Built with HTML5, CSS3, Bootstrap, and JavaScript.
+          </p>
+          <div class="project-tech">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>Bootstrap</span>
+            <span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mauliksakariya005/Maulik_Sakariya_portfolio" class="project-link">View Code</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="bg-light section">
-    <div class="container">
-      <h2 class="section-heading">Contact Me</h2>
-      <div class="row">
-        <div class="col-md-6 mx-auto">
-          <form>
-            <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
+      <!-- Project 2 - Placeholder -->
+      <div class="project-card">
+        <div class="project-img">
+          <img src="documents/project2_img.png" alt="Coming Soon">
+        </div>
+        <div class="project-content">
+          <h3>Movie Recommendation System</h3>
+          <p class="project-description">
+            A group project building a personalized movie recommendation engine.
+            (Currently in development)
+          </p>
+          <div class="project-tech">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>Bootstrap</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link disabled">Coming Soon</a>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
+
+
+
+
+
+ <!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    
+    <div class="contact-box">
+      <div class="contact-form-side">
+        <form class="contact-form">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" class="form-input" placeholder="Enter Name" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" class="form-input" placeholder="example@email.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea class="form-textarea" placeholder="Hello, I'd like to connect about..." required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+      
+      <div class="contact-info-side">
+        <h3>Other Ways to Reach Me</h3>
+        
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:mauliksakariya005@gmail.com" class="email-link">mauliksakariya005@gmail.com</a>
+          </div>
+        </div>
+        
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:+919510924747" class="phone-link">+91 95109 24747</a>
+          </div>
+        </div>
+        
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div>
+            <h4>Location</h4>
+            <p>Jamnagar, Gujarat</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- Footer -->
-  <footer class="footer text-white text-center py-3">
-    <div class="container">
-      <p>&copy; 2025 Maulik Sakariya. All rights reserved.</p>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="https://in.linkedin.com/in/maulik-sakariya-679740257" class="social-icon">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/mauliksakariya005" class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://x.com/mauliksakariya5?t=1ZlFJgkxMZH7Wq-oXdPnkQ&s=09" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/mauliksakariya_/" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <a href="#home" class="footer-link">Home</a>
+        <a href="#about" class="footer-link">About</a>
+        <a href="#resume" class="footer-link">Resume</a>
+        <a href="#projects" class="footer-link">Projects</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="copyright">
+        <p>&copy; 2025 Maulik Sakariya. All rights reserved.</p>
+        <p class="made-with-love">Made with <i class="fas fa-heart"></i> in India</p>
+      </div>
     </div>
-  </footer>
+  </div>
+</footer>
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
