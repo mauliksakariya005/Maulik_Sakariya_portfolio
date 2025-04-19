@@ -1,47 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maulik Sakariya - Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css\navbar.css" rel="stylesheet">
-  <link href="css\styles.css" rel="stylesheet">
-  <link href="css\herosection.css" rel="stylesheet">
-  <link href="css\aboutme.css" rel="stylesheet">
-  <link href="css\resume.css" rel="stylesheet">
-  <link href="css\projects.css" rel="stylesheet">
-  <link href="css\contact.css" rel="stylesheet">
-  <link href="css\footer.css" rel="stylesheet">
-  <script src="script.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maulik Sakariya - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link id="navbar-css" href="css/navbar.css" rel="stylesheet">
+    <link id="styles-css" href="css/styles.css" rel="stylesheet">
+    <link id="herosection-css" href="css/herosection.css" rel="stylesheet">
+    <link id="aboutme-css" href="css/aboutme.css" rel="stylesheet">
+    <link id="resume-css" href="css/resume.css" rel="stylesheet">
+    <link id="projects-css" href="css/projects.css" rel="stylesheet">
+    <link id="contact-css" href="css/contact.css" rel="stylesheet">
+    <link id="footer-css" href="css/footer.css" rel="stylesheet">
+    <link id="blue-theme" href="css/blue-theme.css" rel="stylesheet" disabled>
+    <link id="green-theme" href="css/green-theme.css" rel="stylesheet" disabled>
+    <link id="dark-theme" href="css/dark-theme.css" rel="stylesheet" disabled>
+    <script src="script.js"></script>
+  </head>
 <body>
-    
+
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#home">Maulik Sakariya</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <!-- Right-side icons on mobile -->
+      <div class="d-lg-none d-flex align-items-center ms-auto gap-2">
+        <!-- Mobile Theme Icon Toggler -->
+        <div class="dropdown">
+          <button class="btn btn-theme-toggle" type="button" data-bs-toggle="dropdown">
+            <i class="bi bi-sun"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#" onclick="setTheme('default')"><i class="bi bi-sun icon-warm"></i> Default</a></li>
+            <li><a class="dropdown-item" href="#" onclick="setTheme('blue')"><i class="bi bi-droplet icon-blue"></i> Blue</a></li>
+            <li><a class="dropdown-item" href="#" onclick="setTheme('green')"><i class="bi bi-tree icon-green"></i> Green</a></li>
+            <li><a class="dropdown-item" href="#" onclick="setTheme('dark')"><i class="bi bi-moon-stars icon-dark"></i> Dark</a></li>
+          </ul>
+        </div>
+
+
+        <!-- Navbar Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" id="navbarToggler">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+  
+      <!-- Collapsible Menu -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#resume">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+  
+          <!-- Desktop Theme Button -->
+          <li class="nav-item dropdown d-none d-lg-block">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i class="bi bi-palette2 me-1"></i> Theme</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#" onclick="setTheme('default')"><i class="bi bi-sun me-2"></i> Default (Warm)</a></li>
+              <li><a class="dropdown-item" href="#" onclick="setTheme('blue')"><i class="bi bi-droplet me-2 text-primary"></i> Blue</a></li>
+              <li><a class="dropdown-item" href="#" onclick="setTheme('green')"><i class="bi bi-tree me-2 text-success"></i> Green</a></li>
+              <li><a class="dropdown-item" href="#" onclick="setTheme('dark')"><i class="bi bi-moon-stars me-2 text-dark"></i> Dark</a></li>
+            </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  
+  
+  
 
   <!-- Hero Section -->
   <section id="home" class="profile-section">
@@ -61,65 +92,65 @@
   </section>
   
 
-<!-- About Section -->
-<section id="about" class="section">
-    <div class="container">
-      <h2 class="section-heading">About <span class="highlight">Me</span></h2>
-      <div class="about-container">
-        <div class="about-card">
-          <div class="about-icon">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <div class="about-content">
-            <p>As a Computer Engineering student at GEC-Rajkot, I've developed strong technical skills through coursework and hands-on projects. Here's what I've learned so far:</p>
-            
-            <div class="skills-grid">
-              <div class="skill-item">
-                <i class="fab fa-cuttlefish"></i>
-                <span>C Programming</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-html5"></i>
-                <span>HTML5</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-css3-alt"></i>
-                <span>CSS3</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-database"></i>
-                <span>DBMS</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-java"></i>
-                <span>Java OOP</span>
-              </div>
-              <div class="skill-item">
-                <i class="fab fa-python"></i>
-                <span>Python</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-project-diagram"></i>
-                <span>DSA</span>
-              </div>
-              <div class="skill-item">
-                <i class="fas fa-database"></i>
-                <span>MySQL</span>
+  <!-- About Section -->
+  <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-heading"><span class="highlight">About Me</span></h2>
+        <div class="about-container">
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="about-content">
+              <p>As a Computer Engineering student at GEC-Rajkot, I've developed strong technical skills through coursework and hands-on projects. Here's what I've learned so far:</p>
+              
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <i class="fab fa-cuttlefish"></i>
+                  <span>C Programming</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-html5"></i>
+                  <span>HTML5</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-css3-alt"></i>
+                  <span>CSS3</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fas fa-database"></i>
+                  <span>DBMS</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-java"></i>
+                  <span>Java OOP</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fab fa-python"></i>
+                  <span>Python</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fas fa-project-diagram"></i>
+                  <span>DSA</span>
+                </div>
+                <div class="skill-item">
+                  <i class="fas fa-database"></i>
+                  <span>MySQL</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</section>
+      <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </section>
+    
   
-  
-<!-- Resume Section -->
+  <!-- Resume Section -->
   <section id="resume" class="profile-section">
     <div class="container">
-      <h2 class="section-heading">My <span class="highlight">Resume</span></h2>
+      <h2 class="section-heading"><span class="highlight">My Resume</span></h2>
       <div class="resume-wrapper">
         <!-- Personal Information Column -->
         <div class="resume-column">
@@ -245,9 +276,9 @@
   
 
   <!-- Projects Section -->
-<section id="projects" class="projects-section">
+  <section id="projects" class="projects-section">
   <div class="container">
-    <h2 class="section-heading">My <span class="highlight">Projects</span></h2>
+    <h2 class="section-heading"><span class="highlight">My Projects</span></h2>
     <p class="section-subtitle">Here's what I've built so far</p>
     
     <div class="projects-grid">
@@ -299,7 +330,7 @@
       </div>
     </div>
   </div>
-</section>
+  </section>
 
 
 
@@ -307,111 +338,103 @@
 
 
 
- <!-- Contact Section -->
-<section id="contact" class="contact-section">
-  <div class="container">
-    <h2 class="section-title">Get In Touch</h2>
-    
-    <div class="contact-box">
-      <div class="contact-form-side">
-        <form class="contact-form">
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" class="form-input" placeholder="Enter Name" required>
-          </div>
-          
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" class="form-input" placeholder="example@email.com" required>
-          </div>
-          
-          <div class="form-group">
-            <label>Your Message</label>
-            <textarea class="form-textarea" placeholder="Hello, I'd like to connect about..." required></textarea>
-          </div>
-          
-          <button type="submit" class="submit-btn">
-            <i class="fas fa-paper-plane"></i> Send Message
-          </button>
-        </form>
-      </div>
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
       
-      <div class="contact-info-side">
-        <h3>Other Ways to Reach Me</h3>
-        
-        <div class="contact-method">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div>
-            <h4>Email</h4>
-            <a href="mailto:mauliksakariya005@gmail.com" class="email-link">mauliksakariya005@gmail.com</a>
-          </div>
+      <div class="contact-box">
+        <div class="contact-form-side">
+          <form class="contact-form">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" class="form-input" placeholder="Enter Name" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" class="form-input" placeholder="example@email.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Your Message</label>
+              <textarea class="form-textarea" placeholder="Hello, I'd like to connect about..." required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
         </div>
         
-        <div class="contact-method">
-          <div class="contact-icon">
-            <i class="fas fa-phone"></i>
+        <div class="contact-info-side">
+          <h3>Other Ways to Reach Me</h3>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:mauliksakariya005@gmail.com" class="email-link">mauliksakariya005@gmail.com</a>
+            </div>
           </div>
-          <div>
-            <h4>Phone</h4>
-            <a href="tel:+919510924747" class="phone-link">+91 95109 24747</a>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+919510924747" class="phone-link">+91 95109 24747</a>
+            </div>
           </div>
-        </div>
-        
-        <div class="contact-method">
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div>
-            <h4>Location</h4>
-            <p>Jamnagar, Gujarat</p>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <p>Jamnagar, Gujarat</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      
-      <!-- Social Links -->
-      <div class="social-links">
-        <a href="https://in.linkedin.com/in/maulik-sakariya-679740257" class="social-icon">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/mauliksakariya005" class="social-icon">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://x.com/mauliksakariya5?t=1ZlFJgkxMZH7Wq-oXdPnkQ&s=09" class="social-icon">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/mauliksakariya_/" class="social-icon">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-      
-      <!-- Quick Links -->
-      <div class="footer-links">
-        <a href="#home" class="footer-link">Home</a>
-        <a href="#about" class="footer-link">About</a>
-        <a href="#resume" class="footer-link">Resume</a>
-        <a href="#projects" class="footer-link">Projects</a>
-        <a href="#contact" class="footer-link">Contact</a>
-      </div>
-      
-      <!-- Copyright -->
-      <div class="copyright">
-        <p>&copy; 2025 Maulik Sakariya. All rights reserved.</p>
-        <p class="made-with-love">Made with <i class="fas fa-heart"></i> in India</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        
+        <!-- Social Links -->
+        <div class="social-links">
+          <a href="https://in.linkedin.com/in/maulik-sakariya-679740257" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/mauliksakariya005" class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="https://x.com/mauliksakariya5?t=1ZlFJgkxMZH7Wq-oXdPnkQ&s=09" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/mauliksakariya_/" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <a href="#home" class="footer-link">Home</a>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#resume" class="footer-link">Resume</a>
+          <a href="#projects" class="footer-link">Projects</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="copyright">
+          <p>&copy; 2025 Maulik Sakariya. All rights reserved.</p>
+          <p class="made-with-love">Made with <i class="fas fa-heart"></i> in India</p>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 
   <!-- Bootstrap JS -->

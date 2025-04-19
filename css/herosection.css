@@ -1,140 +1,110 @@
+.profile-section {
+  padding: 4rem 0;
+  background: #fff3e6;
+  font-family: 'Poppins', sans-serif;
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-  
-  .profile-section {
-    padding: 2rem 0;
-    background: #f8f9fa;
-    font-family: 'Poppins', sans-serif;
-  }
-  
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.profile-text {
+  flex: 1;
+  min-width: 320px;
+}
+
+.profile-photo {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.profile-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #d67f4b, #b25531);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.profile-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: #5e2b1c;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.profile-school {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  color: #8a5c40;
+  font-style: italic;
+}
+
+.profile-desc {
+  font-size: 1rem;
+  color: #5e2b1c;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.profile-desc::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  height: 90%;
+  width: 3px;
+  background: linear-gradient(to bottom, #e8874e, #f2b98d);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
   .profile-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column-reverse;
     gap: 2rem;
+    padding: 0 1rem;
   }
-  
+
   .profile-text {
-    flex: 1;
-    min-width: 300px;
-  }
-  
-  .profile-photo {
-    flex: 1;
     text-align: center;
-    min-width: 250px;
   }
-  
-  .profile-img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .profile-img:hover {
-    transform: scale(1.03);
-  }
-  
-  .profile-name {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-    color: #2d3748;
-    letter-spacing: -0.5px;
-    background: linear-gradient(90deg, #3f51b5, #2196f3);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  
-  .profile-title {
-    font-size: 1.1rem;
-    margin-bottom: 0.0625rem;
-    color: #4a5568;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  
-  .profile-school {
-    font-size: 1rem;
-    margin-bottom: 0.2;
-    color: #718096;
-    font-style: italic;
-  }
-  
-  .profile-desc {
-    font-size: 0.95rem;
-    margin-bottom: 0;
-    color: #4a5568;
-    line-height: 1.4;
-    position: relative;
-    padding-left: 1rem;
-  }
-  
+
   .profile-desc::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    background: linear-gradient(to bottom, #2196f3, #00bcd4);
+    display: none;
   }
-  
-  @media (max-width: 768px) {
-    .profile-wrapper {
-      flex-direction: column-reverse;
-      gap: 1rem;
-    }
-    .profile-text {
-      text-align: center;
-    }
-    .profile-desc::before {
-      display: none;
-    }
-    .profile-img {
-      width: 180px;
-      height: 180px;
-    }
-  }
-
-
 
   .profile-img {
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    height: 200px;
   }
-
-  /* Overlay styles for enlarged image */
-  .image-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    cursor: pointer;
-  }
-
-  .enlarged-img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 50%;
-    border: 5px solid white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 0.3s ease;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.8); }
-    to { opacity: 1; transform: scale(1); }
-  }
+}

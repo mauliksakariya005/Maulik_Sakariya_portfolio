@@ -1,11 +1,12 @@
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #83b8e4;
-  }
-  .navbar, .footer {
-    background-color: #343a40;
-  }
-  .section {
-    padding: 60px 0;
-  }
+  font-family: 'Arial', sans-serif;
+  background-color: #F4E1D2;
+}
+
+.navbar, .footer {
+  background-color: #D49A6A;
+}
+
+.section {
+  padding: 60px 0;
+}

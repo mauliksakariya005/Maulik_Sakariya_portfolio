@@ -1,0 +1,223 @@
+:root {
+    --primary: #3A86FF;           /* vibrant blue accent */
+    --secondary: #1E2A38;         /* deep navy */
+    --accent: #5C7FAF;            /* muted soft blue */
+    --light: #0D1117;             /* dark base */
+    --dark: #F1F1F1;              /* text on dark */
+    --gray: #9CA3AF;              /* soft neutral text */
+    --card-bg: #161B22;           /* unified section bg */
+    --transition: all 0.3s ease;
+  }
+  
+  /* Base Elements */
+  body {
+    background-color: var(--light) !important;
+    color: var(--dark) !important;
+    transition: var(--transition);
+  }
+  
+  h1, h2, h3, h4 {
+    color: var(--primary) !important;
+  }
+  
+  /* Navbar & Footer */
+  .navbar, .footer {
+    background-color: var(--secondary) !important;
+  }
+  
+  .navbar {
+    background: rgba(30, 42, 56, 0.95) !important;
+  }
+  
+  .navbar-brand {
+    color: #C6DEFD !important;
+  }
+  
+  .navbar-brand:hover {
+    color: var(--primary) !important;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #BBD6F2 !important;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #D7E9FF !important;
+  }
+  
+  .navbar-nav .nav-link::after {
+    background-color: var(--primary) !important;
+  }
+  
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link:focus {
+    color: #ffffff !important;
+  }
+  
+  .navbar-toggler {
+    border-color: var(--primary) !important;
+  }
+  
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    background-color: var(--accent) !important;
+    border: 2px solid var(--primary) !important;
+  }
+  
+  /* Profile / Hero Section */
+  .profile-section {
+    background: var(--card-bg) !important;
+  }
+  
+  .profile-title,
+  .profile-school,
+  .profile-desc {
+    color: var(--dark) !important;
+  }
+  
+  .profile-desc::before {
+    background: linear-gradient(to bottom, var(--primary), #1a2c45) !important;
+  }
+  
+  /* About Section */
+  .about-container {
+    background: var(--light) !important;
+  }
+  
+  .about-container::before {
+    background: linear-gradient(to bottom, var(--primary), var(--accent)) !important;
+  }
+  
+  .about-icon {
+    background: linear-gradient(135deg, rgba(58, 79, 102, 0.2), rgba(92, 127, 175, 0.2)) !important;
+    color: var(--primary) !important;
+  }
+  
+  .about-icon:hover {
+    color: var(--accent) !important;
+  }
+  
+  .about-content p {
+    color: var(--gray) !important;
+  }
+  
+   /* Project Section */
+  .section-subtitle {
+    color: #ffffff;
+  }
+  
+  /* Skills Section */
+  .skill-item {
+    background: var(--card-bg) !important;
+  }
+  
+  .skill-item .skill-name {
+    color: var(--primary) !important;
+  }
+  
+  .skill-item .skill-level {
+    color: var(--gray) !important;
+  }
+  
+  .skill-list li {
+    background: var(--secondary) !important;
+    color: var(--dark) !important;
+  }
+  
+  /* Resume Section */
+  .resume-column {
+    background: #242d39 !important;
+  }
+  
+  .resume-header {
+    border-bottom: 2px solid #3A86FF !important;
+  }
+  
+  .resume-header i {
+    color: var(--primary) !important;
+    background: var(--light) !important;
+  }
+  
+  .resume-header h3 {
+    color: var(--dark) !important;
+  }
+  
+  .info-item i {
+    color: var(--primary) !important;
+  }
+  
+  .resume-item:before {
+    background: linear-gradient(to bottom, var(--primary), var(--accent)) !important;
+  }
+  
+  .resume-date {
+    color: var(--accent) !important;
+  }
+  
+  .resume-content h4 {
+    color: var(--dark) !important;
+  }
+  
+  .resume-subtitle, .resume-details {
+    color: var(--gray) !important;
+  }
+  
+  .resume-institution {
+    color: var(--gray) !important;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    background: var(--card-bg) !important;
+  }
+  
+  .section-title {
+    color: var(--dark) !important;
+  }
+  
+  .contact-form-side,
+  .contact-info-side {
+    background: #212936 !important;
+  }
+  
+  .form-input,
+  .form-textarea {
+    border: 1px solid var(--accent) !important;
+    background: var(--secondary) !important;
+    color: var(--dark) !important;
+  }
+  
+  .form-input:focus,
+  .form-textarea:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 5px rgba(92, 127, 175, 0.3) !important;
+  }
+  
+  .submit-btn {
+    background: linear-gradient(90deg, var(--primary), var(--accent)) !important;
+    color: white !important;
+  }
+  
+  .submit-btn:hover {
+    background: linear-gradient(90deg, #284B63, var(--primary)) !important;
+  }
+  
+  .contact-icon {
+    background: var(--primary) !important;
+    color: white !important;
+  }
+  
+  /* Buttons & Highlights */
+  .highlight {
+    color: var(--accent) !important;
+  }
+  
+  .highlight::after {
+    background: linear-gradient(90deg, var(--accent), transparent) !important;
+  }
+  
+  .download-btn {
+    background: linear-gradient(90deg, var(--secondary), var(--primary)) !important;
+    color: white !important;
+  }
+  
