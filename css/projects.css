@@ -86,14 +86,24 @@
     transition: all 0.3s ease;
   }
 
+  .project-link1 {
+    padding: 8px 16px;
+    background: #f80606;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+
+  .project-link1:hover {
+    background: #4302e9;
+  }
+
   .project-link:hover {
     background: #3182ce;
   }
 
-  .project-link.disabled {
-    background: #a0aec0;
-    cursor: not-allowed;
-  }
 
   @media (max-width: 768px) {
     .projects-grid {
