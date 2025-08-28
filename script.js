@@ -82,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-
 //theme change
 function setTheme(theme) {
   const themes = ['blue', 'green', 'dark'];
